@@ -21,7 +21,7 @@ namespace DefaultNamespace
 
         private void ProcessAimInput()
         {
-            _aimTarget = Input.mousePosition;
+            _aimTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
 
         private void ProcessLaunchInput()

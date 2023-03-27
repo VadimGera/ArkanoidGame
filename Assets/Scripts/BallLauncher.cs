@@ -41,5 +41,16 @@ namespace DefaultNamespace
         {
             _inputProvider.OnUpdate();
         }
+
+        private void OnDrawGizmos()
+        {
+            if (!Application.isPlaying)
+            Gizmos.color = Color.red;
+
+            var targetPos = _inputProvider.GetAimTarget();
+            var initialPos = transform.position;
+            
+            Gizmos.DrawLine(initialPos, targetPos);
+        }
     }
 }
