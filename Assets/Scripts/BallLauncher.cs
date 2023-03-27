@@ -7,12 +7,10 @@ namespace DefaultNamespace
     {
         [SerializeField] private float _launchSpeed = 1f;
         [SerializeField] private Rigidbody2D _ball;
-        private IAimInputProvider _inputProvider;
+        [SerializeField] private AimInputProviderBase _inputProvider;
 
         private void Start()
         {
-            _inputProvider = new AimInputProvider();
-
             _inputProvider.OnLaunch += Launch;
 
             // шар будет следить за платформой
@@ -36,13 +34,9 @@ namespace DefaultNamespace
             _ball.transform.parent = null;
             _ball.AddForce(shootDirection, ForceMode2D.Impulse);
         }
+        
 
-        private void Update()
-        {
-            _inputProvider.OnUpdate();
-        }
-
-        private void OnDrawGizmos()
+        /*private void OnDrawGizmos()
         {
             if (!Application.isPlaying)
             Gizmos.color = Color.red;
@@ -51,6 +45,6 @@ namespace DefaultNamespace
             var initialPos = transform.position;
             
             Gizmos.DrawLine(initialPos, targetPos);
-        }
+        }*/
     }
 }
