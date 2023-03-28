@@ -5,6 +5,8 @@ namespace DefaultNamespace
 {
     public class BallLauncher : MonoBehaviour
     {
+        public event Action OnLaunched;
+        
         [SerializeField] private float _launchSpeed = 1f;
         [SerializeField] private Rigidbody2D _ball;
         [SerializeField] private AimInputProviderBase _inputProvider;
@@ -33,18 +35,20 @@ namespace DefaultNamespace
             // запускаем шар с полученной силой
             _ball.transform.parent = null;
             _ball.AddForce(shootDirection, ForceMode2D.Impulse);
-        }
-        
-
-        /*private void OnDrawGizmos()
-        {
-            if (!Application.isPlaying)
-            Gizmos.color = Color.red;
-
-            var targetPos = _inputProvider.GetAimTarget();
-            var initialPos = transform.position;
             
-            Gizmos.DrawLine(initialPos, targetPos);
-        }*/
+            OnLaunched?.Invoke();
+        }
+
+        // private void OnDrawGizmos()
+        // {
+        //     if (!Application.isPlaying) return;
+        //     
+        //     Gizmos.color = Color.red;
+        //
+        //     var targetPos = _inputProvider.GetAimTarget();
+        //     var initialPos = transform.position;
+        //
+        //     Gizmos.DrawLine(initialPos, targetPos);
+        // }
     }
 }

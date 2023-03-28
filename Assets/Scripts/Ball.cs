@@ -1,20 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
-using DefaultNamespace;
+using System;
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+namespace DefaultNamespace
 {
-    [SerializeField] private BlockManager _blockManager;
-    private void OnCollisionEnter2D(Collision2D collision)
+    public class Ball : MonoBehaviour
     {
-        // var otherBlock = collision.transform.GetComponent<Block>();
-        // if (otherBlock == null) return;
-
-        // то же самое
-        if (collision.transform.TryGetComponent<Block>(out Block otherBlock))
+        [SerializeField] private BlockManager _blockManager;
+        [SerializeField] private BallsManager _ballsManager;
+        
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            _blockManager.DamageBlock(otherBlock);
+            // var otherBlock = collision.transform.GetComponent<Block>();
+            // if (otherBlock == null) return;
+
+            // то же самое
+            if (collision.transform.TryGetComponent<Block>(out Block otherBlock))
+            {
+                _blockManager.DamageBlock(otherBlock);
+            }
+            if (collision.transform.TryGetComponent<KillPlane>(out KillPlane _))
+            {
+                _ballsManager.DestroyBall(this);
+            }
         }
     }
 }

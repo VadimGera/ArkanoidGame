@@ -7,18 +7,7 @@ namespace DefaultNamespace
     {
         [Range(0f, 2f)] [SerializeField] private float _speed = 1f;
         [SerializeField] private float _levelBorderX;
-        
-        private IHorizontalInputProvider _horizontalInputProvider;
-
-        private void Awake()
-        {
-            _horizontalInputProvider = new HorizontalInputController();
-        }
-
-        private void Update()
-        {
-            _horizontalInputProvider.OnUpdate();
-        }
+        [SerializeField] private HorizontalInputProviderBase _horizontalInputProvider;
 
         private void FixedUpdate()
         {

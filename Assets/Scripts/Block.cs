@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Block : MonoBehaviour
+namespace DefaultNamespace
 {
-    [SerializeField] private int _hp = 5;
-
-    public void Damage(int damage)
+    public class Block : MonoBehaviour
     {
-        _hp -= damage;
+        [SerializeField] private int _hp = 5;
 
-        if (_hp <= 0)
+        public bool IsDestroyed { get; private set; } = false;
+
+        public void Damage(int damage)
         {
-            Destroy(gameObject);
+            _hp -= damage;
+
+            if (_hp <= 0)
+            {
+                Destroy(gameObject);
+                IsDestroyed = true;
+            }
         }
     }
 }

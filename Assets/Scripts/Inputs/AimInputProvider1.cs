@@ -8,7 +8,7 @@ namespace DefaultNamespace
         public override event Action OnLaunch;
         private Vector3 _aimTarget;
 
-        public void OnUpdate()
+        public void Update()
         {
             ProcessLaunchInput();
             ProcessAimInput();
