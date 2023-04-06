@@ -7,8 +7,8 @@ namespace DefaultNamespace.Ui
     {
         [SerializeField] private GameObject _itemPrefab; 
         [SerializeField] public RectTransform _content; 
-        public int minItems = 5; 
-        public int maxItems = 20;
+        public int minItems = 2; 
+        public int maxItems = 8;
 
         void Start()
         {
