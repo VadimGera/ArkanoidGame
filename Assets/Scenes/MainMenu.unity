@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &100417623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3578056213787466417, guid: 72f4f249024778e47ac2f6b1c846d9cc, type: 3}
+  m_PrefabInstance: {fileID: 7712956068255665403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &303902465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -941,7 +946,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25.684937}
+  m_AnchoredPosition: {x: 0, y: -25.685059}
   m_SizeDelta: {x: 0, y: -51.729}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &821977119
@@ -1640,8 +1645,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemPrefab: {fileID: 3578056213787466417, guid: 72f4f249024778e47ac2f6b1c846d9cc, type: 3}
   _content: {fileID: 1963061708}
-  minItems: 5
-  maxItems: 20
+  minItems: 3
+  maxItems: 8
 --- !u!224 &1453982049 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2967041705557053472, guid: a7c66db690ee0442b9fa4242b854275a, type: 3}
@@ -1792,7 +1797,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25.684937}
+  m_AnchoredPosition: {x: 0, y: -25.685059}
   m_SizeDelta: {x: 0, y: -51.729}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1655025135
@@ -2123,6 +2128,36 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3229073545342785704, guid: 72f4f249024778e47ac2f6b1c846d9cc, type: 3}
   m_PrefabInstance: {fileID: 7712956068255665403}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1999878315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100417623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.15294118}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1999878316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100417623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.20392157}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &2051358672
 PrefabInstance:
   m_ObjectHideFlags: 0
